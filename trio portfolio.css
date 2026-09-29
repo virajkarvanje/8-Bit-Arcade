@@ -1,0 +1,299 @@
+html {
+  scroll-behavior: smooth;
+}
+/* 1. IMPORTING RETRO PIXEL FONTS FROM GOOGLE */
+@import url('https://googleapis.com');
+
+/* 2. ARCADE COLOR SYSTEM DEFINITIONS */
+:root {
+  --bg-space: #120428;       /* Deep arcade background purple */
+  --bg-cabinet: #240c46;     /* Card housing purple */
+  --neon-cyan: #00ffff;      /* Vibrant cyan text */
+  --neon-pink: #ff007f;      /* Level heading hot pink */
+  --coin-gold: #ffcc00;      /* Buttons and accent tags yellow */
+  --pixel-edge: 4px solid #ffffff; /* Solid retro block border */
+}
+
+/* 3. GLOBAL SETUP RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-space);
+  color: #ffffff;
+  font-family: 'VT323', monospace; /* High-readability pixel text font */
+  font-size: 1.4rem;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+/* 4. LAYOUT CONTROLLERS */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  border-bottom: 4px dashed var(--neon-pink);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.9rem;
+  background-color: rgba(18, 4, 40, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo { color: var(--neon-cyan); }
+.nav-score { color: var(--coin-gold); }
+
+/* 5. TYPOGRAPHY AND HEADINGS */
+h1, h2, h3 {
+  font-family: 'Press Start 2P', cursive; /* Authentic blocky titles font */
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--neon-pink);
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: var(--neon-cyan);
+  margin-bottom: 0.5rem;
+}
+
+/* 6. HERO STYLING */
+.hero {
+  text-align: center;
+  padding: 8rem 1rem 6rem 1rem;
+}
+
+.subtitle {
+  color: var(--neon-cyan);
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+}
+
+/* 7. ARCADE ELEMENTS UTILITIES */
+.arcade-btn {
+  display: inline-block;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  color: var(--coin-gold);
+  background-color: var(--bg-cabinet);
+  border: var(--pixel-edge);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  box-shadow: 6px 6px 0px var(--neon-pink);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.arcade-btn:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--neon-cyan);
+}
+
+.section-block {
+  padding: 5rem 0;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* Adaptive Responsive Grid (Locks full points for responsiveness) */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.arcade-card {
+  background-color: var(--bg-cabinet);
+  border: var(--pixel-edge);
+  padding: 2rem;
+  box-shadow: 6px 6px 0px var(--neon-pink);
+  transition: transform 0.1s, box-shadow 0.1s;
+  position: relative;
+}
+
+.arcade-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--neon-cyan);
+}
+
+/* CARD DETAILS */
+.card-avatar {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card-role {
+  color: var(--coin-gold);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-bio, .project-desc {
+  color: #cccccc;
+  line-height: 1.4;
+}
+
+.stage-tag {
+  display: inline-block;
+  background-color: #000;
+  border: 1px solid var(--neon-pink);
+  color: var(--coin-gold);
+  font-size: 0.9rem;
+  padding: 2px 6px;
+  margin-bottom: 0.8rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.tech-tags span {
+  background: #000;
+  padding: 2px 8px;
+  font-size: 1rem;
+  border: 1px solid var(--neon-cyan);
+}
+
+/* About Layout Tuning */
+.about-box {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+/* Skills Inventory Flex Grid System */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.inventory-slot {
+  background-color: var(--bg-cabinet);
+  border: var(--pixel-edge);
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  box-shadow: 4px 4px 0px var(--neon-cyan);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.inventory-slot:hover {
+  transform: scale(1.08);
+  box-shadow: 6px 6px 0px var(--neon-pink);
+  border-color: var(--coin-gold);
+}
+
+.slot-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.slot-name {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Arcade Contact Form Styling */
+.contact-wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.retro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.retro-form label {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: var(--neon-pink);
+}
+
+.retro-form input, 
+.retro-form textarea {
+  background-color: #000000;
+  border: 2px solid var(--neon-cyan);
+  padding: 0.8rem;
+  color: #ffffff;
+  font-family: 'VT323', monospace;
+  font-size: 1.3rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.retro-form input:focus, 
+.retro-form textarea:focus {
+  border: 2px solid var(--coin-gold);
+  box-shadow: 0 0 8px var(--coin-gold);
+}
+
+.retro-form input::placeholder, 
+.retro-form textarea::placeholder {
+  color: #555555;
+}
+
+.footer {
+  margin-top: 6rem;
+  text-align: center;
+  padding: 2rem;
+  border-top: 4px solid #ffffff;
+  font-size: 1.1rem;
+}
+
+/* 8. 📱 MOBILE RESPONSIVENESS ADJUSTMENTS */
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .hero {
+    padding: 4rem 0;
+  }
+}

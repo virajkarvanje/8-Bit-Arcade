@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trio.exe | Arcade Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <span class="logo">🎮 TRIO.EXE</span>
+    <span class="score">SCORE: 99990</span>
+  </nav>
+
+  <div class="container">
+    
+    <!-- HERO SECTION -->
+    <header class="hero">
+      <h1>Show us<br>who you are.</h1>
+      <p class="subtitle">[ TEAM PORTFOLIO ]</p>
+      <a href="#team" class="arcade-btn">PRESS START</a>
+    </header>
+
+    <!-- TEAM SECTION (CHARACTER SELECT) -->
+    <section id="team" class="section-block">
+      <h2>SELECT YOUR CHARACTER</h2>
+      <div class="grid-layout">
+        
+        <!-- Clickable Player 1 Card (Viraj) -->
+        <a href="#projects" style="text-decoration: none; color: inherit;">
+          <div class="arcade-card">
+            <div class="card-avatar">🔮</div>
+            <h3>P1: VIRAJ</h3>
+            <p class="card-role">CLASS: UI Wizard</p>
+            <p class="card-bio">Focuses on smooth typography, color composition, and clean micro-interactions.</p>
+          </div>
+        </a>
+
+        <!-- Clickable Player 2 Card (Ankit) -->
+        <a href="#projects" style="text-decoration: none; color: inherit;">
+          <div class="arcade-card">
+            <div class="card-avatar">💻</div>
+            <h3>P2: ANKIT</h3>
+            <p class="card-role">CLASS: Layout Sage</p>
+            <p class="card-bio">Master of semantic HTML nodes, clean layouts, and core structure elements.</p>
+          </div>
+        </a>
+
+        <!-- Clickable Player 3 Card (Vrushabh) -->
+        <a href="#projects" style="text-decoration: none; color: inherit;">
+          <div class="arcade-card">
+            <div class="card-avatar">⚡</div>
+            <h3>P3: VRUSHABH</h3>
+            <p class="card-role">CLASS: Interaction Specialist</p>
+            <p class="card-bio">Breaks the boundaries of custom CSS transformations and fluid sizing animations.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (STAGE SELECT) -->
+    <section id="projects" class="section-block">
+      <h2>STAGE SELECT (PROJECTS)</h2>
+     <div class="grid-layout">
+        
+        <!-- Clickable Project 1 Card -->
+        <a href="#skills" style="text-decoration: none; color: inherit;">
+          <div class="arcade-card">
+            <span class="stage-tag">STAGE 01</span>
+            <h3>College Department Site</h3>
+            <p class="project-desc">We built a clean, simple website layout for our engineering department using tables.</p>
+            <div class="tech-tags"><span>HTML5</span><span>Basic CSS</span></div>
+          </div>
+        </a>
+
+        <!-- Clickable Project 2 Card -->
+        <a href="#skills" style="text-decoration: none; color: inherit;">
+          <div class="arcade-card">
+            <span class="stage-tag">STAGE 02</span>
+            <h3>Gaming Fan Page</h3>
+            <p class="project-desc">A fun layout created to practice semantic formatting tags with retro images.</p>
+            <div class="tech-tags"><span>HTML5</span><span>Layout Forms</span></div>
+          </div>
+        </a>
+
+      </div>
+     </section>
+
+    <!-- ABOUT SECTION (THE MISSION BRIEF) -->
+    <section id="about" class="section-block">
+      <h2>MISSION BRIEF</h2>
+      <div class="arcade-card about-box">
+        <p>
+          WELCOME TO TRIO.EXE. WE ARE A THREE-MEMBER FRONTEND SQUAD DETERMINED TO DESTROY BORING UX DESIGN AND BUILD BOLD, PIXEL-PERFECT INTERFACES. 
+        </p>
+        <p style="margin-top: 1rem; color: #00ffff;">
+          CURRENT OBJECTIVE: SECURE FIRST PLACE AT THE NAVJEEVAN HACKATHON 2026.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION (THE POWER-UPS) -->
+    <section id="skills" class="section-block">
+      <h2>POWER-UPS (SKILLS)</h2>
+      <div class="skills-container">
+        <div class="inventory-slot">
+          <span class="slot-icon">⚡</span>
+          <span class="slot-name">HTML5</span>
+        </div>
+        <div class="inventory-slot">
+          <span class="slot-icon">🎨</span>
+          <span class="slot-name">CSS GRID</span>
+        </div>
+        <div class="inventory-slot">
+          <span class="slot-icon">🚀</span>
+          <span class="slot-name">JAVASCRIPT</span>
+        </div>
+        <div class="inventory-slot">
+          <span class="slot-icon">⚛️</span>
+          <span class="slot-name">REACT</span>
+        </div>
+        <div class="inventory-slot">
+          <span class="slot-icon">📐</span>
+          <span class="slot-name">FIGMA</span>
+        </div>
+        <div class="inventory-slot">
+          <span class="slot-icon">🐙</span>
+          <span class="slot-name">GIT SYSTEM</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (INSERT COIN TO CONNECT) -->
+    <section id="contact" class="section-block">
+      <h2>INSERT COIN (CONTACT)</h2>
+      <div class="arcade-card contact-wrapper">
+        <p style="text-align: center; margin-bottom: 2rem; color: #ffcc00;">
+          READY TO START A NEW LEVEL TOGETHER? DROP US A MESSAGE!
+        </p>
+        
+        <form class="retro-form" onsubmit="event.preventDefault(); alert('Message Transmitted Successfully!');">
+          <div class="form-group">
+            <label>PLAYER NAME:</label>
+            <input type="text" placeholder="ENTER YOUR NAME..." required>
+          </div>
+          <div class="form-group">
+            <label>COMMUNICATION LINK (EMAIL):</label>
+            <input type="email" placeholder="ENTER YOUR EMAIL..." required>
+          </div>
+          <div class="form-group">
+            <label>TRANSMISSION MESSAGE:</label>
+            <textarea rows="4" placeholder="WRITE YOUR MESSAGE HERE..." required></textarea>
+          </div>
+          <div style="text-align: center; margin-top: 3rem;">
+           <a href="#contact" class="arcade-btn">PROCEED TO NEXT LEVEL ➡️</a>
+         </div>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    READY PLAYER ONE - CHIP ENGINE HACKATHON 2026
+  </footer>
+
+</body>
+</html>
